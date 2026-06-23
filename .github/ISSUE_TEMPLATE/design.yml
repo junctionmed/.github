@@ -1,0 +1,34 @@
+name: "DESIGN: UI 디자인 변경"
+description: UI/UX 디자인 변경 및 퍼블리싱 작업을 기록합니다.
+title: "[DESIGN] "
+labels: ["design"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 🎨 요약
+      description: 이슈에 대한 간단한 설명
+      placeholder: 예) 메인 페이지 배너 레이아웃 수정 및 버튼 색상 변경
+    validations:
+      required: true
+
+  - type: textarea
+    id: detail
+    attributes:
+      label: 🖌️ 변경 내용
+      description: 어떤 디자인이 어떻게 변경되는지 설명하거나 피그마 시안 링크/스크린샷을 첨부해주세요.
+      placeholder: |
+        - 기존 둥근 버튼에서 각진 버튼으로 스타일 변경
+        - 모바일 화면에서 여백(Padding) 조절
+        - 피그마 링크: https://...
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ 체크리스트
+      options:
+        - label: 반응형 웹 적용 확인
+        - label: 다크/라이트 모드 정상 동작 확인
+        - label: 크로스 브라우징(Chrome, Safari 등) 테스트 완료

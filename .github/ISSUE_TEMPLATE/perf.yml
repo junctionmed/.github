@@ -1,0 +1,44 @@
+name: "PERF: 성능 개선"
+description: 시스템 성능 개선 및 최적화를 위한 이슈입니다.
+title: "[PERF] "
+labels: ["perf"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: 🚀 요약
+      description: 성능 개선 목표에 대한 간단한 설명
+      placeholder: 예) 메인 페이지 이미지 로딩 속도 최적화
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📊 현상 및 개선 목표 (As-Is / To-Be)
+      description: 현재 문제점과 목표 성능 지표를 적어주세요.
+      placeholder: |
+        - As-Is: 고용량 이미지 로딩으로 인해 초기 렌더링에 3초 소요
+        - To-Be: WebP 포맷 적용 및 Lazy loading으로 1.5초 이내 단축
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: 🔧 개선 방법
+      description: 구체적으로 어떤 기술과 방법을 적용할 계획인가요?
+      placeholder: |
+        - S3 업로드 시 이미지 압축 로직 추가
+        - N+1 쿼리 문제 해결을 위해 Fetch Join 적용
+        - 불필요한 렌더링 방지를 위한 React.memo 적용
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: ✅ 체크리스트
+      options:
+        - label: 성능 지표 측정 도구(Lighthouse, Profiler 등)로 전/후 비교 완료
+        - label: 성능 개선으로 인한 기존 기능 사이드 이펙트 없음 확인
