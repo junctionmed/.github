@@ -42,12 +42,14 @@ body:
       validations:
         required: false
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: ✅ 체크리스트
-      options:
-        - label: 로컬에서 변경 사항 확인 완료
-        - label: CI/CD에서 정상적으로 동작 확인
-        - label: 기능상 영향 없음 확인
-        - label: 릴리즈 노트 작성 불필요
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false

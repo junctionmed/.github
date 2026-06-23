@@ -24,11 +24,14 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: ✅ 체크리스트
-      options:
-        - label: 로컬 환경에서 빌드 성공 확인
-        - label: CI 파이프라인 정상 통과 확인
-        - label: 팀원들에게 의존성/환경 업데이트 필요성 공유
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false

@@ -24,11 +24,14 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: ✅ 체크리스트
-      options:
-        - label: 반응형 웹 적용 확인
-        - label: 다크/라이트 모드 정상 동작 확인
-        - label: 크로스 브라우징(Chrome, Safari 등) 테스트 완료
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false

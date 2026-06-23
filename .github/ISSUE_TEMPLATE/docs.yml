@@ -19,11 +19,14 @@ body:
     validations:
       required: false
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: 체크리스트
-      options:
-        - label: 최신 동작과 일치 확인
-        - label: 스크린샷/예시 코드 최신화
-        - label: 링크 유효성 확인
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false

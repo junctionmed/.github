@@ -35,10 +35,14 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: ✅ 체크리스트
-      options:
-        - label: 성능 지표 측정 도구(Lighthouse, Profiler 등)로 전/후 비교 완료
-        - label: 성능 개선으로 인한 기존 기능 사이드 이펙트 없음 확인
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false
