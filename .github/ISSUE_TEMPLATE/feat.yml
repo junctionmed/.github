@@ -24,15 +24,17 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     id: checklist
     attributes:
-      label: ✅ 체크리스트
-      options:
-        - label: A 기능 완료
-        - label: B 기능 완료
-        - label: C 기능 완료
-        - label: D 기능 완료
+      label: ✅ 세부 작업 (체크리스트)
+      description: 이번 이슈에서 처리해야 할 세부 작업 항목들을 작성해주세요.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: false
 
   - type: textarea
     id: expected
